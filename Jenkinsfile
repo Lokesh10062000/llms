@@ -24,7 +24,7 @@ pipeline {
                 echo 'Release Nexus'
                 sh 'rm -rf *.zip'
                 sh 'cd webapp && zip dist-${BUILD_NUMBER}.zip -r dist'
-               // sh 'cd webapp && curl -v -u $Username:$Password --upload-file dist-${BUILD_NUMBER}.zip http://20.172.187.108:8081/repository/lms/'
+                sh 'cd webapp && curl -v -u $Username:$Password --upload-file dist-${BUILD_NUMBER}.zip http://18.233.67.236:8081/repository/llms/'
             }
         }
     }
